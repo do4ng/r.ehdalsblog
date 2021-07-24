@@ -135,12 +135,12 @@
     font-size: 0.855rem;
     font-weight: 600;
   }
-  :global(a) {
+  :global(.view a) {
     text-decoration: none;
     color: #5683ff;
   }
 
-  :global(a:hover) {
+  :global(.view a:hover) {
     text-decoration: solid 1px underline #5683ff;
   }
 </style>
