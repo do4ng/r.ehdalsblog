@@ -1,0 +1,44 @@
+blockquote {
+  margin: 0;
+  border-left: 0.25em solid #d1d1d1;
+  color: #8f8f8f;
+  padding: 0 1em;
+  margin: 0;
+}
+blockquote p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 0 !important;
+  white-space: normal;
+}
+
+li::marker {
+  font-size: smaller;
+  color: #727272;
+}
+.a-no-deco {
+  text-decoration: none;
+  color: inherit;
+}
+.a-hover-deco {
+  text-decoration: none;
+  color: #5683ff;
+}
+
+.a-hover-deco:hover {
+  text-decoration: solid 1px underline #5683ff;
+}
+
+.button-hide {
+  background: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.disable-select-text {
+  user-select: none;
+}
