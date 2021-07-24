@@ -41,7 +41,7 @@
     <div class="intro">
       <div class="intro-title"><h1>{p.title}</h1></div>
       <div class="date"><span id="viewer" /> views, {p.date}</div>
-      <div class="thumbnail"><img alt="" src={p.thumbnail} /></div>
+      <div class="thumbnail"><img alt="" src={p.thumbnail} width="100%" /></div>
     </div>
     <div class="post headers">
       <div>{@html Marked(p.content)}</div>
@@ -82,7 +82,7 @@
     letter-spacing: -0.025rem;
   }
   .thumbnail {
-    width: 90%;
+    width: 80vw;
     margin: 2.5rem auto;
   }
   .date {
