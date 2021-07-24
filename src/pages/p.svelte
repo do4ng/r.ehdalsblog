@@ -82,7 +82,7 @@
     letter-spacing: -0.025rem;
   }
   .thumbnail {
-    width: 80vw;
+    width: 90%;
     margin: 2.5rem auto;
   }
   .date {
