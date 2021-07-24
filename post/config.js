@@ -4,6 +4,6 @@ export let posts = [
     url: "hello-world",
     date: "2021/7/5",
     category: "기타",
-    thumbnail: "/static/images/img-hello-world.jpg",
+    thumbnail: "/static/images/img-hello-world.PNG",
   },
 ];
