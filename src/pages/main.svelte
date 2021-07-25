@@ -7,6 +7,19 @@
   p.forEach((element) => {
     s[element.category] = s[element.category] + 1 || 1;
   });
+  p.forEach(async function (element, index) {
+    const ress = await fetch(
+      `https://rehdalsblog.herokuapp.com/getview/${index}`
+    );
+    if (ress.ok) {
+      ress
+        .json()
+        .then(
+          (e) =>
+            (document.getElementById(`card-view-${index}`).innerText = e.view)
+        );
+    }
+  });
   s = SortObj(s);
   function category(element) {
     window.location.href = `#/c/${element}`;
@@ -39,7 +52,9 @@
                 .replaceAll("\n", "")
                 .substr(0, 80)} ...</span
             >
-            <div class="card-date">{element.date} - #{element.category}</div>
+            <div class="card-date">
+              <span id="card-view-{index}">0</span> views - #{element.category}
+            </div>
           </div>
         </a>
       </div>
