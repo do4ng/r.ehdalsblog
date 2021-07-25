@@ -32,7 +32,7 @@
   let links = $location;
   setInterval(() => {
     if ($location != links) {
-      //
+      // Code
       links = $location;
     }
   }, 1000);
