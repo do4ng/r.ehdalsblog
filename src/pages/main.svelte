@@ -12,27 +12,32 @@
     window.location.href = `#/c/${element}`;
     window.location.reload();
   }
+  function click(element) {
+    window.location.href = `#/p/${element}`;
+    window.location.reload();
+  }
 </script>
 
 <div class="main-container">
   <div class="card-container">
     {#each p as element, index}
       <div class="main-card">
-        <a class="a-no-deco" href="#/p/{index}">
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <a
+          class="a-no-deco"
+          role="button"
+          on:click={() => click(p.length - index - 1)}
+        >
           <div class="thumbnail-card">
-            <a class="a-no-deco" href="#/p/{index}">
-              <img alt="" src={element.thumbnail} /></a
-            >
+            <img alt="" src={element.thumbnail} />
           </div>
           <div class="card-content">
-            <a class="a-no-deco" href="#/p/{index}">
-              <h4>{element.title}</h4>
-              <span class="card-content-less"
-                >{element.content
-                  .substring(0, element.content.indexOf("##"))
-                  .replaceAll("\n", "")
-                  .substr(0, 80)} ...</span
-              ></a
+            <h4>{element.title}</h4>
+            <span class="card-content-less"
+              >{element.content
+                .substring(0, element.content.indexOf("##"))
+                .replaceAll("\n", "")
+                .substr(0, 80)} ...</span
             >
             <div class="card-date">{element.date} - #{element.category}</div>
           </div>
@@ -87,6 +92,7 @@
     font-weight: 600;
   }
   .card-container {
+    cursor: pointer;
     width: 1005px;
     margin: 125px 0;
     display: flex;
