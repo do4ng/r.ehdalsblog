@@ -32,7 +32,7 @@
   let links = $location;
   setInterval(() => {
     if ($location != links) {
-      console.log("page changed");
+      //
       links = $location;
     }
   }, 1000);
