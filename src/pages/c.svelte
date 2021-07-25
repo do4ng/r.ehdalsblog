@@ -6,9 +6,15 @@
   import SortObj from "../lib/sortobj";
   let p = [];
   export let params = { c: "" };
-  Post.forEach((e) => {
-    if (e.category == params.c || params.c == "all") p.push(e);
+  let sl = [];
+  Post.forEach((e, index) => {
+    if (e.category == params.c || params.c == "all") {
+      p.push(e);
+      sl.push(index);
+      console.log(sl);
+    }
   });
+  sl = sl.reverse();
   let s = {};
   s["전체 글"] = Post.length;
   Post.forEach((element) => {
@@ -29,17 +35,20 @@
   <div class="card-container">
     {#each p.reverse() as element, index}
       <div class="main-card">
-        <a class="a-no-deco" href="#/p/{index}">
+        <a class="a-no-deco" href="#/p/{sl[index]}">
           <div class="thumbnail-card">
-            <a class="a-no-deco" href="#/p/{index}">
+            <a class="a-no-deco" href="#/p/{sl[index]}">
               <img alt="" src={element.thumbnail} /></a
             >
           </div>
           <div class="card-content">
-            <a class="a-no-deco" href="#/p/{index}">
+            <a class="a-no-deco" href="#/p/{sl[index]}">
               <h4>{element.title}</h4>
               <span class="card-content-less"
-                >{element.content.substr(0, 80).replaceAll("\n", "")} ...</span
+                >{element.content
+                  .substring(0, element.content.indexOf("##"))
+                  .replaceAll("\n", "")
+                  .substr(0, 80)} ...</span
               ></a
             >
             <div class="card-date">{element.date} - #{element.category}</div>
