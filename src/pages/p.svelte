@@ -105,6 +105,7 @@
     border-radius: 5px;
     box-shadow: -2px 5px 15px 1px #3636365e;
     margin: 2.5rem 0;
+    max-width: 90%;
   }
   .outro {
     border-radius: 5px;
