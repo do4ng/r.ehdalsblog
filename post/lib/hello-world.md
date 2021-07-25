@@ -2,7 +2,7 @@ r.ehdals 부터 rkdlog 까지
 
 ## 👋 안녕하세요.
 
-프론트엔드를 주로 다루는 학생입니다.
+프론트엔드를 좋아하는 학생입니다. 😁
 
 ### 🤔 개발 동기
 
@@ -19,7 +19,7 @@ r.ehdals 부터 rkdlog 까지
 ### Backend
 
 `express`를 통해 개발하였습니다. database는 `firebase`를 사용하였습니다.  
-database는 처음 접한거라 조금 어려웠지만 다 제작하고 보니 뿌듯하고 재미있었습니다.
+database는 처음 접한거라 조금 어려웠지만 재미있는 경험이였습니다.
 
 ## 🎠 앞으로의 계획
 
@@ -29,3 +29,7 @@ database는 처음 접한거라 조금 어려웠지만 다 제작하고 보니 �
 
 이전 블로그는 더이상 사용하지 않을 예정입니다.  
 혹시 이전 포스트를 보고싶으신 분들은 [이곳을](https://rehdals.netlify.app) 방문하시면 됩니다.
+
+## ❗ 버그
+
+혹시 버그를 발견했다면 댓글 또는 [Github](https://github.com/kangdongmandoo/r.ehdalsblog)를 통해 알려주시면 감사하겠습니다.
