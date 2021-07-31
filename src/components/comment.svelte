@@ -138,7 +138,4 @@
     color: #414141;
     display: inline-block;
   }
-  .comment-send {
-    display: flex;
-  }
 </style>
