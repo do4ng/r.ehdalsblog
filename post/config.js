@@ -13,4 +13,11 @@ export let posts = [
     category: "svelte",
     thumbnail: "/static/images/img-vite-js.png",
   },
+  {
+    title: "만들면서 svelte 배우기 (1)",
+    url: "learn-svelte-1",
+    date: "2021/7/31",
+    category: "svelte",
+    thumbnail: "/static/images/img-svelte-logo-center.png",
+  },
 ];
