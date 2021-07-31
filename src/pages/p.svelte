@@ -19,8 +19,13 @@
     window.location.reload();
   }
 
+  console.log(window.location.host);
+
   async function getComment() {
-    await fetch(`https://rehdalsblog.herokuapp.com/view/${params.name}`);
+    if (!window.location.host.includes("localhost")) {
+      // If Dev Server
+      await fetch(`https://rehdalsblog.herokuapp.com/view/${params.name}`);
+    }
     const ress = await fetch(
       `https://rehdalsblog.herokuapp.com/getview/${params.name}`
     );
