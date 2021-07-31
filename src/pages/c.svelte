@@ -11,7 +11,6 @@
     if (e.category == params.c || params.c == "all") {
       p.push(e);
       sl.push(index);
-      console.log(sl);
     }
   });
   sl = sl.reverse();
@@ -21,7 +20,6 @@
     s[element.category] = s[element.category] + 1 || 1;
   });
   s = SortObj(s);
-  console.log(s);
   function category(element) {
     if (element === "전체 글") {
       element = "all";
@@ -31,15 +29,12 @@
   }
   p.forEach(async function (element, index) {
     const ress = await fetch(
-      `https://rehdalsblog.herokuapp.com/getview/${index}`
+      `https://rehdalsblog.herokuapp.com/getview/${sl[index]}`
     );
     if (ress.ok) {
-      ress
-        .json()
-        .then(
-          (e) =>
-            (document.getElementById(`card-view-${index}`).innerText = e.view)
-        );
+      ress.json().then((e) => {
+        document.getElementById(`card-view-${sl[index]}`).innerText = e.view;
+      });
     }
   });
 </script>
@@ -65,7 +60,7 @@
               ></a
             >
             <div class="card-date">
-              <span id="card-view-{index}">0</span> views - #{element.category}
+              <span id="card-view-{sl[index]}">[??]</span> views - #{element.category}
             </div>
           </div>
         </a>
