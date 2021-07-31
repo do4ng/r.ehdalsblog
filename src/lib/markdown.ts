@@ -4,7 +4,11 @@ import hljs from "highlight.js";
 const renderer = new marked.Renderer();
 renderer.heading = function (text, level, id) {
   const v = id.toLowerCase().replaceAll(" ", "-");
-  const r = `<h${level} id="${v}">${text}</h${level}>\n<hr />`;
+  let r = `<h${level} id="${v}">${text}</h${level}>`;
+
+  if (Number(level) === 1 || Number(level) === 2) {
+    r = `${r}\n<hr />`;
+  }
 
   return r;
 };
