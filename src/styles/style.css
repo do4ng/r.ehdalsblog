@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 blockquote {
   margin: 0;
   border-left: 0.25em solid #d1d1d1;
@@ -41,4 +42,10 @@ li::marker {
 }
 .disable-select-text {
   user-select: none;
+}
+hr {
+  margin-left: 0px;
+  margin-bottom: 40px;
+  width: 790px;
+  border: solid 0.5px #e7e7e79a;
 }
