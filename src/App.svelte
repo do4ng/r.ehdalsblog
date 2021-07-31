@@ -27,6 +27,9 @@
     "/guideline/": wrap({
       asyncComponent: () => import("./pages/guideline.svelte"),
     }),
+    "/link/:l": wrap({
+      asyncComponent: () => import("./pages/link.svelte"),
+    }),
     "*": Notfound,
   };
   let links = $location;
@@ -46,7 +49,6 @@
 <Footer />
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR&display=swap");
 
   @import url("../node_modules/highlight.js/styles/atom-one-dark.css");
