@@ -25,13 +25,21 @@
   async function submitComment() {
     isFetching = true;
     showalert("댓글 등록 중..", "message");
-    const ress = await fetch(
-      `https://rehdalsblog.herokuapp.com/comment/${id}/${comment}`
-    );
-    if (ress.ok) {
-      window.location.reload();
+
+    if (!window.location.host.includes("localhost")) {
+      // If Dev Server
+      const ress = await fetch(
+        `https://rehdalsblog.herokuapp.com/comment/${id}/${comment}`
+      );
+      if (ress.ok) {
+        window.location.reload();
+      } else {
+        showalert("댓글 등록에 실패하였습니다.", "error");
+        isFetching = false;
+      }
     } else {
-      showalert("댓글 등록에 실패하였습니다.", "error");
+      showalert("거부됨 : Dev Server", "error");
+      isFetching = false;
     }
   }
   const submit = (e) => {
