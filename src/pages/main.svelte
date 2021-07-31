@@ -53,7 +53,7 @@
                 .substr(0, 80)} ...</span
             >
             <div class="card-date">
-              <span id="card-view-{index}">0</span> views - #{element.category}
+              <span id="card-view-{p.length - index - 1}">[?]</span> views - #{element.category}
             </div>
           </div>
         </a>
@@ -163,7 +163,7 @@
     }
     .main-card {
       width: 45%;
-      height: 25%;
+      height: 100%;
       border: solid 0.5px #e9e9e9;
       border-radius: 8px;
       margin: 25px 15px;
@@ -194,7 +194,7 @@
     }
     .main-card {
       width: 100%;
-      height: 15%;
+      height: 60%;
       border: solid 0.5px #e9e9e9;
       border-radius: 8px;
       margin: 25px 15px;
