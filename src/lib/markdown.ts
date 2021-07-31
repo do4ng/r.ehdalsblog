@@ -2,7 +2,12 @@ import marked from "marked";
 import hljs from "highlight.js";
 
 const renderer = new marked.Renderer();
+renderer.heading = function (text, level, id) {
+  const v = id.toLowerCase().replaceAll(" ", "-");
+  const r = `<h${level} id="${v}">${text}</h${level}>\n<hr />`;
 
+  return r;
+};
 marked.setOptions({
   langPrefix: "hljs language-",
   renderer: renderer,
