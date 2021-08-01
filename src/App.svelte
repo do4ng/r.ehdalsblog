@@ -8,7 +8,6 @@
   import Router, { location } from "svelte-spa-router";
 
   import { wrap } from "svelte-spa-router/wrap";
-  import showalert from "./lib/showalert";
 
   const routes = {
     "/": wrap({ asyncComponent: () => import("./pages/main.svelte") }),
@@ -18,16 +17,13 @@
     "/p/": wrap({
       asyncComponent: () => import("./pages/p-default.svelte"),
     }),
-    "/c/:c": wrap({
+    "/c/:c?": wrap({
       asyncComponent: () => import("./pages/c.svelte"),
-    }),
-    "/c/": wrap({
-      asyncComponent: () => import("./pages/c-default.svelte"),
     }),
     "/guideline/": wrap({
       asyncComponent: () => import("./pages/guideline.svelte"),
     }),
-    "/link/:l": wrap({
+    "/link/:l/:type?": wrap({
       asyncComponent: () => import("./pages/link.svelte"),
     }),
     "*": Notfound,
