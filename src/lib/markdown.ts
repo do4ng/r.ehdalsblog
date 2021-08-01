@@ -12,6 +12,10 @@ renderer.heading = function (text, level, id) {
 
   return r;
 };
+renderer.link = function (href, title, text) {
+  var link = marked.Renderer.prototype.link.call(this, href, title, text);
+  return link.replace("<a", "<a target='_blank' ");
+};
 marked.setOptions({
   langPrefix: "hljs language-",
   renderer: renderer,
