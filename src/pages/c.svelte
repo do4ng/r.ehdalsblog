@@ -1,11 +1,12 @@
 <script lang="ts">
-  import showalert from "../lib/showalert";
-
   import B from "../components/effect/b.svelte";
   import Post from "../data/posts.json";
   import SortObj from "../lib/sortobj";
   let p = [];
   export let params = { c: "" };
+  if (params.c === null) {
+    params.c = "all";
+  }
   let sl = [];
   Post.forEach((e, index) => {
     if (e.category == params.c || params.c == "all") {
