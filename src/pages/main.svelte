@@ -163,7 +163,7 @@
     }
     .main-card {
       width: 45%;
-      height: 100%;
+      height: 55%;
       border: solid 0.5px #e9e9e9;
       border-radius: 8px;
       margin: 25px 15px;
@@ -194,7 +194,7 @@
     }
     .main-card {
       width: 100%;
-      height: 60%;
+      height: 40%;
       border: solid 0.5px #e9e9e9;
       border-radius: 8px;
       margin: 25px 15px;
